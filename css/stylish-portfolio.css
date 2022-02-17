@@ -18,10 +18,25 @@ body {
 
 h1 {
 	font-color: white;
-	color:antiquewhite
+	color:antiquewhite;
 }
 
+h4 {
+	font-color: white;
+	color:white;
+}
 
+div h4 {
+	font-color: #fff;
+	color:#fff;
+}
+
+.searchtablehead {
+	font-color: #666;
+	font-size: 140%;
+	font-weight: 600;
+	line-height: 1.4;
+}
 
 .text-vertical-center {
     display: table-cell;
@@ -493,4 +508,77 @@ div.summary-header[_ngcontent-hcs-c130] {
 }
 div.container2[_ngcontent-hcs-c130] {
     opacity: unset
+}
+
+div.info {
+    position: relative;
+    border: thin;
+	border-style: solid;
+	border-radius: 15px;
+	border-color: #D1D1D1;
+	padding: 0px 10px 
+}
+div.info-header {
+    position: relative;
+    background: #036;
+	border: thin;
+	border-style: solid;
+	border-radius: 15px;
+	border-color: #036;
+	padding: 0px 10px 
+}
+div.info-header2 {
+    position: relative;
+    background: #036;
+	border: thin;
+	border-style: solid;
+	border-radius: 15px;
+	border-color: #036;
+	padding: 0px 10px 
+}
+.bg-info:hover {
+      background-color: #d9edf7;
+    }
+.lead2 {
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.4
+}
+@media (min-width:768px) {
+  .lead2 {
+    font-size: 21px
+  }
+}
+.lead3 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4
+}
+@media (min-width:768px) {
+  .lead3 {
+    font-size: 16px
+  }
+}
+
+.lead4 {
+  margin: 0 0 0 20px;
+	font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4
+ 
+}
+@media (min-width:768px) {
+  .lead4 {
+    font-size: 21px
+  }
+}
+
+
+
+
+.col-md-9 {
+	background: #FFF;	
+	
 }
