@@ -31,6 +31,16 @@ div h4 {
 	color:#fff;
 }
 
+h4.dark {
+	font-color: #666;
+	color: #666;
+}
+
+div h4.dark {
+	font-color: #666;
+	color:#666;
+}
+
 .searchtablehead {
 	font-color: #666;
 	font-size: 140%;
