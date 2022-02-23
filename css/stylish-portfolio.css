@@ -31,14 +31,16 @@ div h4 {
 	color:#fff;
 }
 
-h4.dark {
-	font-color: #666;
-	color: #666;
+dark {
+	font-color: #036;
+	color: #036;
+	font-size: 18px;
 }
 
-div h4.dark {
-	font-color: #666;
-	color:#666;
+.dark {
+	font-color: #036;
+	color:#036;
+	font-size: 18px;
 }
 
 .searchtablehead {
