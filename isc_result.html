@@ -112,8 +112,7 @@
             <div class="row">
                 <div class="col-lg-12 text-left">
                     <h2>Integration Services Catalogue</h2>
-                  <h3><i class="fa fa-file-o"></i> Search Results</h3>
-                
+                                  
 				<!-- Search Form -->
 				<div class="container">
 <div class="row">
@@ -124,35 +123,44 @@
         <div class="row">
           <!-- BEGIN FILTERS -->
           <div class="col-md-3">
-            <h3 class="grid-title"><i class="fa fa-filter"></i> Filters</h3>
-            <hr>
             
             <!-- BEGIN FILTER BY CATEGORY -->
-            <h4>By Domain:</h4>
-            <div class="checkbox">
-              <label><input type="checkbox" class="icheck"> Court Case</label>
-            </div>
-            <div class="checkbox">
-              <label><input type="checkbox" class="icheck"> Court Scheduling</label>
-            </div>
-            <div class="checkbox">
-              <label><input type="checkbox" class="icheck"> Courts Digital Display</label>
-            </div>
+            <div class="info">
             
-			  
-			 <h4>By Integration Style:</h4>
+			<div class="info-header"><h4>By Domain:</h4></div>
+            <table class="table table-hover">
+				<tbody>
+					<tr>
+						<td class="bg-info">Court Case</td>
+					</tr>
+					<tr>
+						<td>Court Scheduling</td>
+					</tr>
+					<tr>
+						<td>Courts Digital Display</td>
+					</tr>
+				</tbody>
+				</table>
+            </div>
+			 <p>&nbsp;</p> 
+			 <div class="info">
+            
+			<div class="info-header"><h4 class="info-header">Integration Style:</h4></div>
             <div class="checkbox">
               <label><input type="checkbox" class="icheck"> Events</label>
             </div>
             <div class="checkbox">
               <label><input type="checkbox" class="icheck"> APIs</label>
             </div>
-            
+			  </div>
             <!-- END FILTER BY CATEGORY -->
             
             <div class="padding"></div>
             
             <!-- BEGIN FILTER BY DATE -->
+			  
+			  <!--
+			  
             <h4>By date:</h4>
             From
             <div class="input-group date form_date" data-date="2014-06-14T05:25:07Z" data-date-format="dd-mm-yyyy" data-link-field="dtp_input1">
@@ -167,8 +175,14 @@
               <span class="input-group-addon bg-blue"><i class="fa fa-th"></i></span>
             </div>
             <input type="hidden" id="dtp_input2" value="">
+
+			-->
+
             <!-- END FILTER BY DATE -->
             
+
+			  
+			  
             <div class="padding"></div>
             
             
@@ -177,17 +191,17 @@
           <!-- END FILTERS -->
           <!-- BEGIN RESULT -->
           <div class="col-md-9">
-            <h3><i class="fa fa-file-o"></i> Result</h3>
+            <h3><i class="fa fa-file-o"></i> Services Catalogue Search Result</h3>
             <hr>
             <!-- BEGIN SEARCH INPUT -->
             <div class="input-group">
-              <input type="text" class="form-control" value="web development">
+              <input type="text" class="form-control" value="court case management domain">
               <span class="input-group-btn">
                 <a href="isc_display.html"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></a>
               </span>
             </div>
             <!-- END SEARCH INPUT -->
-            <p>Showing all results matching "web development"</p>
+            <p>Showing all results matching "Court Case Management Domain"</p>
             
             <div class="padding"></div>
             
@@ -221,57 +235,65 @@
               <table class="table table-hover">
                 <tbody><tr>
                   <td class="number text-center">1</td>
-                  <td class="image"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></td>
-                  <td class="product"><strong>Product 1</strong><br>This is the product description.</td>
+                  <td class="image"><a href="isc_integration_domain_summary.html"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></a></td>
+                  <td class="product"><a href="isc_integration_domain_summary.html"><strong>Case Approved (Event)</strong><br>This is a consumable domain event from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with the approval of a court case.</a></td>
                   <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
                   
                 </tr>
                 <tr>
                   <td class="number text-center">2</td>
                   <td class="image"><img src="https://via.placeholder.com/400x300/5F9EA0" alt=""></td>
-                  <td class="product"><strong>Product 2</strong><br>This is the product description.</td>
+                  <td class="product"><strong>Case Created (Event)</strong><br>This is a consumable domain event from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with the formal declaration<br>of a court case.</td>
                   <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td>
                   
                 </tr>
                 <tr>
                   <td class="number text-center">3</td>
                   <td class="image"><img src="https://via.placeholder.com/400x300" alt=""></td>
-                  <td class="product"><strong>Product 3</strong><br>This is the product description.</td>
+                  <td class="product"><strong>Case Merged (Event)</strong><br>This is a consumable domain event from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with the merging of two court cases.</td>
                   <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span></td>
                   
                 </tr>
                 <tr>
                   <td class="number text-center">4</td>
                   <td class="image"><img src="https://via.placeholder.com/400x300/8A2BE2" alt=""></td>
-                  <td class="product"><strong>Product 4</strong><br>This is the product description.</td>
+                  <td class="product"><strong>Case Updated (Event)</strong><br>This is a consumable domain event from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with a court case update.</td>
                   <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span></td>
                   
                 </tr>
                 <tr>
                   <td class="number text-center">5</td>
                   <td class="image"><img src="https://via.placeholder.com/400x300" alt=""></td>
-                  <td class="product"><strong>Product 5</strong><br>This is the product description.</td>
+                  <td class="product"><strong>Check Case User Access Approval (API)</strong><br>This is a callable domain API operation from the Court Case Lookup Service.<br>
+					  This operation allows the calling application to determine if a specific BCPS user can access the<br> indicated court caseand its associated case materials.</td>
                   <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></td>
                   
                 </tr>
                 <tr>
                   <td class="number text-center">6</td>
                   <td class="image"><img src="https://via.placeholder.com/400x300/6495ED" alt=""></td>
-                  <td class="product"><strong>Product 6</strong><br>This is the product description.</td>
+                  <td class="product"><strong>Get e-Disclosure Eligibility Status (API)</strong><br>This is a callable domain API operation from the Court Case e-Disclosure Eligibility Lookup Service.<br>
+					  This operation allows the calling application to determine the ability for an accused individual<br>to receive new evidence through the e-disclosure service at the specific correctional facility.</td>
                   <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
                   
                 </tr>
                 <tr>
                   <td class="number text-center">7</td>
                   <td class="image"><img src="https://via.placeholder.com/400x300/DC143C" alt=""></td>
-                  <td class="product"><strong>Product 7</strong><br>This is the product description.</td>
+                  <td class="product"><strong>Get Case Deposition (API)</strong><br>This is a callable domain API operation from the Court Case Lookup Service.<br>
+					  This operations allows the calling application to retrieve a PDF copy of an entered deposition<br>relating to a court case.</td>
                   <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td>
                   
                 </tr>
                 <tr>
                   <td class="number text-center">8</td>
                   <td class="image"><img src="https://via.placeholder.com/400x300/9932CC" alt=""></td>
-                  <td class="product"><strong>Product 8</strong><br>This is the product description.</td>
+                  <td class="product"><strong>Get Case Accused History (API)</strong><br>This is a callable domain API operation from the Court Case Lookup Service.<br>
+					  This operation allows the calling application to retrieve the history of infractions for<br>an accused individual in the context of the specific court case.</td>
                   <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
                   
                 </tr>
