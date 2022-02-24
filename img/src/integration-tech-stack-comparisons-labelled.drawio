@@ -240,12 +240,12 @@
                 </mxCell>
                 <UserObject label="&lt;font style=&quot;font-size: 18px&quot;&gt;(in the process of being retired)&lt;/font&gt;" placeholders="1" name="Variable" id="163">
                     <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
-                        <mxGeometry x="79" y="199" width="262" height="20" as="geometry"/>
+                        <mxGeometry x="79" y="196" width="262" height="32" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject label="&lt;font style=&quot;font-size: 22px&quot;&gt;Current&lt;/font&gt;" placeholders="1" name="Variable" id="162">
                     <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
-                        <mxGeometry x="165" y="172" width="90" height="29" as="geometry"/>
+                        <mxGeometry x="165" y="169" width="90" height="29" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <mxCell id="164" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
