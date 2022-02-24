@@ -259,7 +259,7 @@
                 <mxCell id="167" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="69" y="640" width="282" height="99" as="geometry"/>
                 </mxCell>
-                <UserObject label="&lt;font style=&quot;font-size: 22px&quot;&gt;Loose-coupling Integration Pattern&lt;/font&gt;" placeholders="1" name="Variable" id="170">
+                <UserObject label="&lt;font style=&quot;font-size: 22px&quot;&gt;Loose-coupling Integration Stack&lt;/font&gt;" placeholders="1" name="Variable" id="170">
                     <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
                         <mxGeometry x="88" y="656" width="245" height="68" as="geometry"/>
                     </mxCell>
