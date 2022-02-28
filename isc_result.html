@@ -122,30 +122,28 @@
             <!-- BEGIN FILTER BY CATEGORY -->
             <div class="info">
             
-			<div class="info-header"><h4>By Domain:</h4></div>
-            <table class="table table-hover">
-				<tbody>
-					<tr>
-						<td class="bg-info">Court Case</td>
-					</tr>
-					<tr>
-						<td>Court Scheduling</td>
-					</tr>
-					<tr>
-						<td>Courts Digital Display</td>
-					</tr>
-				</tbody>
-				</table>
+			<div class="info-header"><h4>Business Domains</h4></div>
+        
+        <div class="checkbox">
+          <label><input type="checkbox" class="icheck" checked disabled> Court Case</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" class="icheck" checked disabled> Court Scheduling</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" class="icheck" checked disabled> Court Digital Display</label>
+        </div>
+
             </div>
 			 <p>&nbsp;</p> 
 			 <div class="info">
             
-			<div class="info-header"><h4 class="info-header">Integration Style:</h4></div>
+			<div class="info-header"><h4 class="info-header">Integration Styles</h4></div>
             <div class="checkbox">
-              <label><input type="checkbox" class="icheck"> Events</label>
+              <label><input type="checkbox" class="icheck" checked onclick="filterResults()" id="checkbox_event_api"> Event APIs</label>
             </div>
             <div class="checkbox">
-              <label><input type="checkbox" class="icheck"> APIs</label>
+              <label><input type="checkbox" class="icheck" checked onclick="filterResults()" id="checkbox_rest_api"> REST APIs</label>
             </div>
 			  </div>
             <!-- END FILTER BY CATEGORY -->
@@ -186,17 +184,19 @@
           <!-- END FILTERS -->
           <!-- BEGIN RESULT -->
           <div class="col-md-9">
-            <h3><i class="fa fa-file-o"></i> Services Catalogue Search Result</h3>
+            <h3><i class="fa fa-file-o"></i> Services Catalogue</h3>
             <hr>
             <!-- BEGIN SEARCH INPUT -->
             <div class="input-group">
-              <input type="text" class="form-control" value="court case management domain">
+              <input id="filterinput" type="text" class="form-control" value="" onkeyup="filterResults()" placeholder="Enter the name / description of an event or a REST API to narrow your search...">
               <span class="input-group-btn">
-                <a href="isc_display.html"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></a>
+                <!--a href="isc_display.html"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></a-->
+                <button class="btn btn-primary" type="button" onclick="filterResults()"><i class="fa fa-search"></i></button>
               </span>
             </div>
             <!-- END SEARCH INPUT -->
-            <p>Showing all results matching "Court Case Management Domain"</p>
+            <!--p style="display:none" class="product6">Showing all results matching "case updated"</p-->
+            <p id="showinput">Showing all results</p>
             
             <div class="padding"></div>
             
@@ -228,68 +228,68 @@
             <!-- BEGIN TABLE RESULT -->
             <div class="table-responsive">
               <table class="table table-hover">
-                <tbody><tr>
-                  <td class="number text-center">1</td>
-                  <td class="image"><a href="isc_integration_domain_summary.html"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></a></td>
-                  <td class="product"><a href="isc_integration_domain_summary.html"><strong>Case Approved (Event)</strong><br>This is a consumable domain event from the Court Case Notification Service.<br>
+                <tbody><tr id="item1" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"><a href="isc_api1.html"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></a></td>
+                  <td class="product"><a href="isc_api1.html"><strong>Case Approved (Event API)</strong><br>This is a consumable domain event API from the Court Case Notification Service.<br>
 					  This event contains the information describing the details associated with the approval of a court case.</a></td>
-                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td-->
                   
                 </tr>
-                <tr>
-                  <td class="number text-center">2</td>
-                  <td class="image"><img src="https://via.placeholder.com/400x300/5F9EA0" alt=""></td>
-                  <td class="product"><strong>Case Created (Event)</strong><br>This is a consumable domain event from the Court Case Notification Service.<br>
-					  This event contains the information describing the details associated with the formal declaration<br>of a court case.</td>
-                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td>
+                <tr id="item2" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"><a href="isc_api2.html"><img src="https://via.placeholder.com/400x300/5F9EA0" alt=""></a></td>
+                  <td class="product"><a href="isc_api2.html"><strong>Case Created (Event API)</strong><br>This is a consumable domain event API from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with the formal declaration<br>of a court case.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td-->
                   
                 </tr>
-                <tr>
-                  <td class="number text-center">3</td>
-                  <td class="image"><img src="https://via.placeholder.com/400x300" alt=""></td>
-                  <td class="product"><strong>Case Merged (Event)</strong><br>This is a consumable domain event from the Court Case Notification Service.<br>
-					  This event contains the information describing the details associated with the merging of two court cases.</td>
-                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span></td>
+                <tr id="item3" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"><a href="isc_api3.html"><img src="https://via.placeholder.com/400x300" alt=""></a></td>
+                  <td class="product"><a href="isc_api3.html"><strong>Case Merged (Event API)</strong><br>This is a consumable domain event API from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with the merging of two court cases.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span></td-->
                   
                 </tr>
-                <tr>
-                  <td class="number text-center">4</td>
-                  <td class="image"><img src="https://via.placeholder.com/400x300/8A2BE2" alt=""></td>
-                  <td class="product"><strong>Case Updated (Event)</strong><br>This is a consumable domain event from the Court Case Notification Service.<br>
-					  This event contains the information describing the details associated with a court case update.</td>
-                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span></td>
+                <tr id="item4" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"><a href="isc_api4.html"><img src="https://via.placeholder.com/400x300/8A2BE2" alt=""></a></td>
+                  <td class="product"><a href="isc_api4.html"><strong>Case Updated (Event API)</strong><br>This is a consumable domain event API from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with a court case update.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span></td-->
                   
                 </tr>
-                <tr>
-                  <td class="number text-center">5</td>
-                  <td class="image"><img src="https://via.placeholder.com/400x300" alt=""></td>
-                  <td class="product"><strong>Check Case User Access Approval (API)</strong><br>This is a callable domain API operation from the Court Case Lookup Service.<br>
-					  This operation allows the calling application to determine if a specific BCPS user can access the<br> indicated court caseand its associated case materials.</td>
-                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></td>
+                <tr id="item5" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"><a href="isc_api5.html"><img src="https://via.placeholder.com/400x300" alt=""></a></td>
+                  <td class="product"><a href="isc_api5.html"><strong>Check Case User Access Approval (REST API)</strong><br>This is a callable domain REST API from the Court Case User Access Lookup Service.<br>
+					  This operation allows the calling application to determine if a specific BCPS user can access the<br> indicated court caseand its associated case materials.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></td-->
                   
                 </tr>
-                <tr>
-                  <td class="number text-center">6</td>
-                  <td class="image"><img src="https://via.placeholder.com/400x300/6495ED" alt=""></td>
-                  <td class="product"><strong>Get e-Disclosure Eligibility Status (API)</strong><br>This is a callable domain API operation from the Court Case e-Disclosure Eligibility Lookup Service.<br>
-					  This operation allows the calling application to determine the ability for an accused individual<br>to receive new evidence through the e-disclosure service at the specific correctional facility.</td>
-                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
+                <tr id="item6" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"><a href="isc_api6.html"><img src="https://via.placeholder.com/400x300/6495ED" alt=""></a></td>
+                  <td class="product"><a href="isc_api6.html"><strong>Get e-Disclosure Eligibility Status (REST API)</strong><br>This is a callable domain REST API from the Court Case e-Disclosure Eligibility Lookup Service.<br>
+					  This operation allows the calling application to determine the ability for an accused individual<br>to receive new evidence through the e-disclosure service at the specific correctional facility.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td-->
                   
                 </tr>
-                <tr>
-                  <td class="number text-center">7</td>
-                  <td class="image"><img src="https://via.placeholder.com/400x300/DC143C" alt=""></td>
-                  <td class="product"><strong>Get Case Deposition (API)</strong><br>This is a callable domain API operation from the Court Case Lookup Service.<br>
-					  This operations allows the calling application to retrieve a PDF copy of an entered deposition<br>relating to a court case.</td>
-                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td>
+                <tr id="item7" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"><a href="isc_api7.html"><img src="https://via.placeholder.com/400x300/DC143C" alt=""></a></td>
+                  <td class="product"><a href="isc_api7.html"><strong>Get Case Deposition (REST API)</strong><br>This is a callable domain REST API from the Court Case Lookup Service.<br>
+					  This operations allows the calling application to retrieve a PDF copy of an entered deposition<br>relating to a court case.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td-->
                   
                 </tr>
-                <tr>
-                  <td class="number text-center">8</td>
-                  <td class="image"><img src="https://via.placeholder.com/400x300/9932CC" alt=""></td>
-                  <td class="product"><strong>Get Case Accused History (API)</strong><br>This is a callable domain API operation from the Court Case Lookup Service.<br>
-					  This operation allows the calling application to retrieve the history of infractions for<br>an accused individual in the context of the specific court case.</td>
-                  <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
+                <tr id="item8" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"><a href="isc_api8.html"><img src="https://via.placeholder.com/400x300/9932CC" alt=""></a></td>
+                  <td class="product"><a href="isc_api8.html"><strong>Get Case Accused History (REST API)</strong><br>This is a callable domain REST API from the Court Case Lookup Service.<br>
+					  This operation allows the calling application to retrieve the history of infractions for<br>an accused individual in the context of the specific court case.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td-->
                   
                 </tr>
               </tbody></table>
@@ -505,6 +505,39 @@ body{background:#eee;
             }
         });
     });
+    </script>
+
+    <script>
+      function filterResults() {
+        var filtertext = document.getElementById("filterinput").value;
+        var showinput = document.getElementById("showinput");
+        var event_api_checked = document.getElementById("checkbox_event_api").checked;
+        var rest_api_checked = document.getElementById("checkbox_rest_api").checked;
+
+        if (filtertext === "") {
+          showinput.innerText = 'showing all results';
+
+          var divsToHide = document.getElementsByClassName("api_item");
+          for (var i = 0; i < divsToHide.length; i++) {
+            if ((i < 4 && event_api_checked) || (i >= 4 && rest_api_checked)) {
+              divsToHide[i].style.display = "block";
+            } else {
+              divsToHide[i].style.display = "none";
+            }
+          }
+        } else {
+          showinput.innerText = 'showing all results matching "' + filtertext + '"';
+
+          var divsToHide = document.getElementsByClassName("api_item");
+          for (var i = 0; i < divsToHide.length; i++) {
+            if (divsToHide[i].innerText.toLowerCase().includes(filtertext.toLowerCase()) && ((i < 4 && event_api_checked) || (i >= 4 && rest_api_checked))) {
+              divsToHide[i].style.display = "block";
+            } else {
+              divsToHide[i].style.display = "none";
+            }
+          }
+        }
+      }
     </script>
 
 </body>
