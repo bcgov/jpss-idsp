@@ -106,28 +106,45 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-left">
-                    <h2>What is an integration Service?</h2>
-					<p class="lead">What is an integration service?</p>
-					<p class="lead">“An integration service is a secure communication component that transports and can
-				transform data from one organization (business area or partner) to another.”</p>
+                    <h2>What is an integration service?</h2>
+					<p class="lead">An integration service is a secure communication component that transports and can
+				transform data from one organization (business area or partner) to another.</p>
 
-				<p class="lead">Essentially, an integration service:
+                <p class="lead">Below is a patterns-based, general purpose integration service.</p>
 
-				  <ul class="lead">
-						<li>
-						Mediate between the systems and applications, transforming data from one format to another;
-						</li>
-						<li>
-						Business logic fragmented and exists outside applications; Integration coupled directly
-						to data sources are inflexible
-						</li>
-						<li>
-						Route data to the correct system;
-						</li>
-						<li>
-						Provide security assurance, auditing and governance functions
-						</li>
-						</ul></p>
+                <center><img src="img/loosely-coupled-integration-solution.png"></center>
+
+                <p class="lead">Essentially, an integration service defines:
+
+                    <ul class="lead">
+                        <li>
+                        how applications can exchange messages - example pattern: polling consumer
+                        </li>
+                        <li>
+                        what format will the messages be created - example pattern: event message
+                        </li>
+                        <li>
+                        how will the messages be transmitted - example pattern: publish-and-subscribe
+                        </li>
+                        <li>
+                        what messages should be sent to which system - example pattern: content-based router
+                        </li>
+                        <li>
+                        what message transformation will need to take place - example pattern: content enricher
+                        </li>
+                        <li>
+                        how will the integration be managed and monitored - example pattern: message history
+                        </li>
+                    </ul>
+                </p>
+
+                <br>
+
+                <p>Visit <a href="https://www.enterpriseintegrationpatterns.com/">EnterpriseIntegrationPatterns.com</a> to learn more about enterprise integration patterns.</p>
+
+                <br>
+
+                <p class="lead">For more definitions, please visit the <a href="glossary.html">glossary</a> page.</p>
                 </div>
             </div>
             <!-- /.row -->
