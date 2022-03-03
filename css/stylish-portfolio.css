@@ -400,8 +400,6 @@ body {
 }
 
 
-
-
 .header2[_ngcontent-hcs-c128] {
   background-color: #036
 }
@@ -409,7 +407,6 @@ body {
   height: 70px;
   padding: 0
 }
-
 
 .mat-toolbar2[_ngcontent-hcs-c128] img[_ngcontent-hcs-c128] {
   margin-top: -15px
@@ -427,7 +424,6 @@ body {
 }
 .mat-toolbar2[_ngcontent-hcs-c128] .mat-icon[_ngcontent-hcs-c128] {
   cursor: pointer;
-
   margin-top: .4em;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -450,18 +446,24 @@ body {
 .site-footer-links2[_ngcontent-hcs-c129] {
     list-style: none;
     margin-bottom: 0;
-    margin-left: 0
+    margin-left: 0;
 }
 .site-footer-links2[_ngcontent-hcs-c129] li[_ngcontent-hcs-c129] {
-    margin-bottom: 16px
+    margin-bottom: 10px
 }
-.site-footer-links2[_ngcontent-hcs-c129] li[_ngcontent-hcs-c129]:first-child {
+.site-footer-links2[_ngcontent-hcs-c129] {
+    list-style: none;
+	color: #fff!important;
+    margin-bottom: 0;
+    margin-left: 0;
+	padding: 20px 0;
+	align: left;
+}
+.site-footer-links2 {
+    list-style: none;
+	color: #fff!important;
+    margin-bottom: 0;
     margin-left: 0
-}
-.site-footer-links2[_ngcontent-hcs-c129] a[_ngcontent-hcs-c129] {
-
-    color: #fff!important;
-    font-weight: 200
 }
 .divider2[_ngcontent-hcs-c129] {
     color: #fff;
