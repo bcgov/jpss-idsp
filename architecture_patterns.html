@@ -33,6 +33,8 @@
 <body>
 
     <!-- Navigation -->
+
+
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -106,28 +108,81 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-left">
-                    <h2>Integration Governance</h2>
-					<p class="lead"><img src="../../Profile/Desktop/IN PROGRESS/Integration Service Delivery Team Governance Model - Draft v1c.jpg" width="1147" height="679" alt=""/></p>
-                  <p class="lead"><strong>Things to consider (but not limited to) when developing an integrations component or service:</strong></p>
-					<ul class="lead">
-					<li>What data are you sharing?</li> 
-					<li>Who are your users?</li> 
-					<li>What kind of data security do you need?</li> 
-					<li>Are you looking at connecting one application to another? Or are multiple applications involved?</li>
-					<li>What are your existing processes?</li>
-					<li>Why do you need an integration service?</li>
-					<li>Do you have funding?</li>
-					<li>Who will be part of the devops team?</li>
-					<li>Have you thought about what kind of support you need?</li>
-					<li>Do you have any constraints? </li>
-					</ul>
-					</div>
-                <p><br></p><p>&nbsp;</p><p><img src="img/Integrations Framework Overview -DRAFT v1 (Feb 13).jpg" width="1152" height="648"></p>				</div>
+                    <h2>Existing Integration Architecture and Established Patterns</h2>
+                  <p class="lead">The sector supports a variety of integration technology and patterns. Below are some examples of what is available in the 
+					  sector. Got an idea for something else? <a href="mailto:jpssids@gov.bc.ca" class="lead5">Contact us</a>!
+				  </p>
+                  <p class="lead">Please note: The 'loose-coupling integration stack' is currently under a proof of concept for the Digital Evidence Management Systems (DEMS) 
+					  Project but we have high hopes it will work for more applications/projects.
+					</p>
+					<br/><img src="img/integration-tech-stack-comparisons-labelled.png" width="1152" height="561" alt=""/>
+           
+                </div>
             </div>
-
             <!-- /.row -->
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-lg-12 text-left">
+                    <h2>Event-based, API-First Loose-coupling Integration Stack</h2>
+
+                  <p class="lead">Being event-driven is different for the sector:</p>
+
+                  <ul class="lead">
+                    <li>Instead of focusing on data at rest, we focus on <strong>data in flight</strong>.</li>
+                    <li>Instead of preserving data as the first priority, we focus on <strong>responding to events</strong> as the first priority.</li>
+                    <li>Instead of data stores being the source of truth, we rely on the <strong>log of events</strong> as the source of truth.</li>
+                    <li>Instead of IT as enterprise information repository, we see IT as the sector's <strong>digital business nervous system</strong>.</li>
+                </ul>
+
+                <center><img src="assets/event_centric_IT.png"></center>
+
+                <br>
+                <p class="lead"><strong>The even based, API-first integration design we are proposing is scalable in several ways: </strong></p>
+                <ol class="lead">
+                  <li><strong>Resuable</strong> - the streaming and REST APIs developed for one integration can be consumed / called in another integration.  E.g., develop once, use many times.</li>
+                          <li><strong>Extensible domain modeling</strong> - Stream and REST API schemas can be extended and changed, while maintaining backward compatibility without impacting existing integrations or the associated applications.  E.g., rather than creating perfect event schemas and command APIs in one go, the designs and definition can iterate and improve over time.</li>
+                          <li><strong>Alterable</strong> - Integration design and logging / auditing rules can be changed without involving the impacted application teams.  E.g., integration logic can be changed independently from application logic, minimizing overhead and dependencies between applications.</li>
+                          <li><strong>Modular</strong> - The event based microservice design means that each domain service and event topic can evolve independently from the rest of domain services.  E.g., this means multiple integration work can take place concurrently without impacting each other.</li>
+                      </ol>
+				  </p>
+
+                  <br>
+
+                  <p class="lead">That said, there are many reasons event based, API-first integration design would be a mis-fit.  In those cases, the simpler, point-to-point integration design should be considered.  We have reviewed the following three documents and pulled out the key cases of mis-fits:</p>
+                    <ol class="lead">
+                        <li><strong><a href="https://doveltech.com/innovation/when-not-to-use-an-soa/">When Not to Use a service oriented architecture (SOA)</a> - event-based, API-first integrations have their roots from past SOA studies. </strong> So the same issues associated with SOAs will extend out to solutions developed using Red Hat Integration tool kit:
+<ol class="lead">
+                  <li>... when you have a homogeneous IT environment - example: makes sense to not shift and lift JUSTIN and CORNET integrations on to JADE without a strategic reason (e.g. decoupling from tight database reliance).</li>
+                  <li>... when true real-time performance is critical - anytime fast response times are critical, the less pieces in the middle the better.</li>
+                    <li>... when things don’t change - if an existing (eg high use) integration between two systems are not expected to change in the foreseeable future, there would be little business value in rewriting the integration to leverage JADE.</li>
+                    <li>...<strong> </strong>when tight coupling is a pro, not a con - example, don't put JADE between an application's user interface and its database.  The two are naturally tightly coupled for fast / stable iterations.</li>
+                </ol>
+                        </li>
+                        <li><strong><a href="https://www.3pillarglobal.com/insights/disadvantages-of-event-driven-architecture/">Disadvantages of event-driven architecture</a> - This calls out the cons that come with event-based solutions: </strong>
+                          <ol class="lead">
+                                <li>The double edge of loosely-coupled events - more attack vectors; e.g. man in the middle attacks can extend to events.</li>
+                                <li>Documenting the anticipation of the unknown - the loose coupling nature (event consumers not able to assume the source or the quality of the events) makes it hard to capture all the possible 'whole system' scenarios.  Another words, point-to-point and synchronous (API-based) integrations are more predictable.</li>
+                                <li>Anticipating the unforeseen - testing the unknown is harder because of the above point.</li>
+                                <li>Hampered error-handling - it can be harder to carry out root cause analysis, because of added complexity with event production, event transmission and event consumption.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Enterprise Integration Pattern (from ISB Architects, December 2021 copy)</strong> – the deck overall favours microservice + event-based + API-first architecture as a way to solve many identified challenges with existing sector integrations.  It did call out that implementing an event-based architecture requires a paradigm shift (need to model events as first step, rather than data first.)  It includes a decision tree, stating that you should not adopt event-driven microservices architecture if all of the following are true:
+<ol class="lead">
+                  <li>You don't have a new team,</li>
+                  <li>You don't need high rate of delivery,</li>
+                    <li>You are not developing a risky service,</li>
+                    <li>You are not developing a high demand service, and</li>
+                    <li>You don't require exotic (different?) frameworks</li>
+                </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
         <!-- /.container -->
-    </section>
+</section>
 
     <!-- What We Do -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
