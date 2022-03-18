@@ -107,12 +107,218 @@
             <div class="row">
                 <div class="col-lg-12 text-left">
                     <h2>Integration Services Catalogue</h2>
-                    <br>
-                    <br>
-                    <br>
-                    <center><p class="lead">Coming Soon</p></center>
+                    <p class="lead">You can find reusable event based, API-first integration services using this search tool.</p>
                                   
+				<!-- Search Form -->
+				<div class="container">
+<div class="row">
+  <!-- BEGIN SEARCH RESULT -->
+  <div class="col-md-12">
+    <div class="grid search">
+      <div class="grid-body">
+        <div class="row">
+          <!-- BEGIN FILTERS -->
+          <div class="col-md-3">
+            
+            <!-- BEGIN FILTER BY CATEGORY -->
+            <div class="info">
+            
+			<div class="info-header"><h4>Business Domains</h4></div>
+        
+        <div class="checkbox">
+          <label><input type="checkbox" class="icheck" checked disabled> Court Case</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" class="icheck" checked disabled> Court Scheduling</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" class="icheck" checked disabled> Court Digital Display</label>
+        </div>
 
+            </div>
+			 <p>&nbsp;</p> 
+			 <div class="info">
+            
+			<div class="info-header"><h4 class="info-header">Integration Styles</h4></div>
+            <div class="checkbox">
+              <label><input type="checkbox" class="icheck" checked onclick="filterResults()" id="checkbox_event_api"> Streaming APIs</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" class="icheck" checked onclick="filterResults()" id="checkbox_rest_api"> REST APIs</label>
+            </div>
+			  </div>
+            <!-- END FILTER BY CATEGORY -->
+            
+            <div class="padding"></div>
+            
+            <!-- BEGIN FILTER BY DATE -->
+			  
+			  <!--
+			  
+            <h4>By date:</h4>
+            From
+            <div class="input-group date form_date" data-date="2014-06-14T05:25:07Z" data-date-format="dd-mm-yyyy" data-link-field="dtp_input1">
+              <input type="text" class="form-control">
+              <span class="input-group-addon bg-blue"><i class="fa fa-th"></i></span>
+            </div>
+            <input type="hidden" id="dtp_input1" value="">
+            
+            To
+            <div class="input-group date form_date" data-date="2014-06-14T05:25:07Z" data-date-format="dd-mm-yyyy" data-link-field="dtp_input2">
+              <input type="text" class="form-control">
+              <span class="input-group-addon bg-blue"><i class="fa fa-th"></i></span>
+            </div>
+            <input type="hidden" id="dtp_input2" value="">
+
+			-->
+
+            <!-- END FILTER BY DATE -->
+            
+
+			  
+			  
+            <div class="padding"></div>
+            
+            
+            <!-- END FILTER BY PRICE -->
+          </div>
+          <!-- END FILTERS -->
+          <!-- BEGIN RESULT -->
+          <div class="col-md-9">
+            <h3><i class="fa fa-file-o"></i> Services Catalogue</h3>
+            <hr>
+            <!-- BEGIN SEARCH INPUT -->
+            <div class="input-group">
+              <input id="filterinput" type="text" class="form-control" value="" onkeyup="filterResults()" placeholder="Enter the name / description of an event or a REST API to narrow your search...">
+              <span class="input-group-btn">
+                <!--a href="isc_display.html"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></a-->
+                <button class="btn btn-primary" type="button" onclick="filterResults()"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+            <!-- END SEARCH INPUT -->
+            <!--p style="display:none" class="product6">Showing all results matching "case updated"</p-->
+            <p id="showinput">Showing all results</p>
+            
+            <div class="padding"></div>
+            
+            <div class="row">
+              <!-- BEGIN ORDER RESULT -->
+              <div class="col-sm-6">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Order by <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Name</a></li>
+                    <li><a href="#">Date</a></li>
+                    <li><a href="#">View</a></li>
+                    <li><a href="#">Rating</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- END ORDER RESULT -->
+              
+              <div class="col-md-6 text-right">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default active"><i class="fa fa-list"></i></button>
+                  <button type="button" class="btn btn-default"><i class="fa fa-th"></i></button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- BEGIN TABLE RESULT -->
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <tbody><tr id="item1" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api1.html"><strong>Case Approved (Streaming API)</strong><br>This is a consumable domain streaming API from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with the approval of a court case.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item2" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api2.html"><strong>Case Created (Streaming API)</strong><br>This is a consumable domain streaming API from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with the formal declaration<br>of a court case.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item3" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api3.html"><strong>Case Merged (Streaming API)</strong><br>This is a consumable domain streaming API from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with the merging of two court cases.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item4" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api4.html"><strong>Case Updated (Streaming API)</strong><br>This is a consumable domain streaming API from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with a court case update.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item5" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api5.html"><strong>Check Case User Access Approval (REST API)</strong><br>This is a callable domain REST API from the Court Case User Access Lookup Service.<br>
+					  This operation allows the calling application to determine if a specific BCPS user can access the<br> indicated court caseand its associated case materials.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></td-->
+                  
+                </tr>
+                <tr id="item6" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api6.html"><strong>Get e-Disclosure Eligibility Status (REST API)</strong><br>This is a callable domain REST API from the Court Case e-Disclosure Eligibility Lookup Service.<br>
+					  This operation allows the calling application to determine the ability for an accused individual<br>to receive new evidence through the e-disclosure service at the specific correctional facility.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item7" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api7.html"><strong>Get Case Deposition (REST API)</strong><br>This is a callable domain REST API from the Court Case Lookup Service.<br>
+					  This operations allows the calling application to retrieve a PDF copy of an entered deposition<br>relating to a court case.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item8" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api8.html"><strong>Get Case Accused History (REST API)</strong><br>This is a callable domain REST API from the Court Case Lookup Service.<br>
+					  This operation allows the calling application to retrieve the history of infractions for<br>an accused individual in the context of the specific court case.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td-->
+                  
+                </tr>
+              </tbody></table>
+            </div>
+            <!-- END TABLE RESULT -->
+            
+            <!-- BEGIN PAGINATION -->
+            <ul class="pagination">
+              <li class="disabled"><a href="#">«</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+            <!-- END PAGINATION -->
+          </div>
+          <!-- END RESULT -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END SEARCH RESULT -->
+</div>
+</div>	
+					
+				<!-- Close Form -->
 					
 				</div>
                 </div>
