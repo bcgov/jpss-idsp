@@ -18,7 +18,7 @@
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -37,8 +37,8 @@
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="index.html">Home</a>
+            <li>
+                <p>&nbsp;</p><a href="index.html">Home</a>
             </li>
             <li>
                 <a href="">What we do</a>
@@ -46,52 +46,43 @@
 				<ul>
 					<li><a href="integration_service.html">What is Integration Service</a>
 					</li>
-					<li><a href="pain_points.html">Current Pain Points</a>
+					<li><a href="current_pain_points.html">Current Pain Points</a>
 					</li>
-					<li><a href="eiaep.html">Architecture & Patterns</a>
-					</li>
-					<li><a href="idsd.html">Service Deployments</a>
+					<li><a href="architecture_patterns.html">Architecture & Patterns</a>
 					</li>
 					<li><a href="service_model.html">Service Model</a>
 					</li>
-					<li><a href="integration_lifecycle.html">Lifecycle</a>
+					<li><a href="integration_governance.html">Integration Governance</a>
 					</li>
-					<li><a href="policies.html">Impacting Policies</a>
-					</li>
-					<li><a href="sector_strategies.html">Sector Strategies</a>
+					<li><a href="sector_strategies_policies.html">Sector Strategies &amp; Policies</a>
 					</li>
 				</ul>
 			<li>
 				<a href="">Who we are</a>
-            </li>
-				<ul>
+            </li>				<ul>
 					<li><a href="our_style.html">Our Style</a>
 					</li>
-					<li><a href="stakeholders.html">Our Stakeholders</a>
+					<li><a href="our_audience_stakeholders.html">Our Audience &amp; Stakeholders</a>
 					</li>
-					<li><a href="idst.html">Our Team</a>
+					<li><a href="our_team.html">Our Team</a>
 					</li>
 				</ul>
             <li>
-                <a href="">Tools & Technology</a>
-            </li>
+				<a href="technology_tools.html">Technology &amp; Tools</a>
+			</li>
 				<ul>
-					<li><a href="tools.html">Tools We Use</a>
+					<li><a href="technology_tools.html">Technology &amp; Tools</a>
 					</li>
-					<li><a href="irt.html">Related Technology</a>
-					</li>
-					<li><a href="isc.html">Services Catalogue</a>
+					<li><a href="services_catalogue.html">Services Catalogue</a>
 					</li>
 				</ul>
-            <li>
+			<li>
                 <a href="feedback.html">Feedback</a>
             </li>
-        </ul>    </nav>
-
-
-    
-      
-        
+        </ul>
+	</nav>
+	
+	<nav class="navbar-style">	
           <app-header _ngcontent-hcs-c130="" _nghost-hcs-c128="">
             <div _ngcontent-hcs-c128="" class="header2 d-print-none">
               <div _ngcontent-hcs-c128="" class="container2">
@@ -99,9 +90,10 @@
               </div>
             </div>
             <div _ngcontent-hcs-c128="" class="ngx-progress">
-              
             </div>
           </app-header>
+	</nav>
+
     <!-- Header -->
     <header id="top" class="header-page">
         <div class="text-vertical-center">
@@ -109,62 +101,256 @@
         </div>
     </header>
 
-    <!-- About -->
+    <!-- Page Content -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-left">
                     <h2>Integration Services Catalogue</h2>
-					<h3><i class="fa fa-file-o"></i> Search our Catalogue</h3>
-					<div class="input-group" align="center">
-              <input type="text" class="form-control" value="web development" >
+                    <p class="lead">You can find reusable event based, API-first integration services using this search tool.</p>
+                                  
+				<!-- Search Form -->
+				<div class="container">
+<div class="row">
+  <!-- BEGIN SEARCH RESULT -->
+  <div class="col-md-12">
+    <div class="grid search">
+      <div class="grid-body">
+        <div class="row">
+          <!-- BEGIN FILTERS -->
+          <div class="col-md-3">
+            
+            <!-- BEGIN FILTER BY CATEGORY -->
+            <div class="info">
+            
+			<div class="info-header"><h4>Business Domains</h4></div>
+        
+        <div class="checkbox">
+          <label><input type="checkbox" class="icheck" checked disabled> Court Case</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" class="icheck" checked disabled> Court Scheduling</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" class="icheck" checked disabled> Court Digital Display</label>
+        </div>
+
+            </div>
+			 <p>&nbsp;</p> 
+			 <div class="info">
+            
+			<div class="info-header"><h4 class="info-header">Integration Styles</h4></div>
+            <div class="checkbox">
+              <label><input type="checkbox" class="icheck" checked onclick="filterResults()" id="checkbox_event_api"> Streaming APIs</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" class="icheck" checked onclick="filterResults()" id="checkbox_rest_api"> REST APIs</label>
+            </div>
+			  </div>
+            <!-- END FILTER BY CATEGORY -->
+            
+            <div class="padding"></div>
+            
+            <!-- BEGIN FILTER BY DATE -->
+			  
+			  <!--
+			  
+            <h4>By date:</h4>
+            From
+            <div class="input-group date form_date" data-date="2014-06-14T05:25:07Z" data-date-format="dd-mm-yyyy" data-link-field="dtp_input1">
+              <input type="text" class="form-control">
+              <span class="input-group-addon bg-blue"><i class="fa fa-th"></i></span>
+            </div>
+            <input type="hidden" id="dtp_input1" value="">
+            
+            To
+            <div class="input-group date form_date" data-date="2014-06-14T05:25:07Z" data-date-format="dd-mm-yyyy" data-link-field="dtp_input2">
+              <input type="text" class="form-control">
+              <span class="input-group-addon bg-blue"><i class="fa fa-th"></i></span>
+            </div>
+            <input type="hidden" id="dtp_input2" value="">
+
+			-->
+
+            <!-- END FILTER BY DATE -->
+            
+
+			  
+			  
+            <div class="padding"></div>
+            
+            
+            <!-- END FILTER BY PRICE -->
+          </div>
+          <!-- END FILTERS -->
+          <!-- BEGIN RESULT -->
+          <div class="col-md-9">
+            <h3><i class="fa fa-file-o"></i> Services Catalogue</h3>
+            <hr>
+            <!-- BEGIN SEARCH INPUT -->
+            <div class="input-group">
+              <input id="filterinput" type="text" class="form-control" value="" onkeyup="filterResults()" placeholder="Enter the name / description of an event or a REST API to narrow your search...">
               <span class="input-group-btn">
-                <a href="isc_result.html"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></a>
+                <!--a href="isc_display.html"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></a-->
+                <button class="btn btn-primary" type="button" onclick="filterResults()"><i class="fa fa-search"></i></button>
               </span>
             </div>
-                  
-                </div>
-                </div>
-                </div>
+            <!-- END SEARCH INPUT -->
+            <!--p style="display:none" class="product6">Showing all results matching "case updated"</p-->
+            <p id="showinput">Showing all results</p>
             
+            <div class="padding"></div>
+            
+            <div class="row">
+              <!-- BEGIN ORDER RESULT -->
+              <div class="col-sm-6">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Order by <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Name</a></li>
+                    <li><a href="#">Date</a></li>
+                    <li><a href="#">View</a></li>
+                    <li><a href="#">Rating</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- END ORDER RESULT -->
+              
+              <div class="col-md-6 text-right">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default active"><i class="fa fa-list"></i></button>
+                  <button type="button" class="btn btn-default"><i class="fa fa-th"></i></button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- BEGIN TABLE RESULT -->
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <tbody><tr id="item1" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api1.html"><strong>Case Approved (Streaming API)</strong><br>This is a consumable domain streaming API from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with the approval of a court case.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item2" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api2.html"><strong>Case Created (Streaming API)</strong><br>This is a consumable domain streaming API from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with the formal declaration<br>of a court case.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item3" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api3.html"><strong>Case Merged (Streaming API)</strong><br>This is a consumable domain streaming API from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with the merging of two court cases.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item4" class="api_item event_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api4.html"><strong>Case Updated (Streaming API)</strong><br>This is a consumable domain streaming API from the Court Case Notification Service.<br>
+					  This event contains the information describing the details associated with a court case update.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item5" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api5.html"><strong>Check Case User Access Approval (REST API)</strong><br>This is a callable domain REST API from the Court Case User Access Lookup Service.<br>
+					  This operation allows the calling application to determine if a specific BCPS user can access the<br> indicated court caseand its associated case materials.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></td-->
+                  
+                </tr>
+                <tr id="item6" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api6.html"><strong>Get e-Disclosure Eligibility Status (REST API)</strong><br>This is a callable domain REST API from the Court Case e-Disclosure Eligibility Lookup Service.<br>
+					  This operation allows the calling application to determine the ability for an accused individual<br>to receive new evidence through the e-disclosure service at the specific correctional facility.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item7" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api7.html"><strong>Get Case Deposition (REST API)</strong><br>This is a callable domain REST API from the Court Case Lookup Service.<br>
+					  This operations allows the calling application to retrieve a PDF copy of an entered deposition<br>relating to a court case.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></td-->
+                  
+                </tr>
+                <tr id="item8" class="api_item rest_api">
+                  <td class="number text-center"></td>
+                  <td class="image"></td>
+                  <td class="product"><a href="isc_api8.html"><strong>Get Case Accused History (REST API)</strong><br>This is a callable domain REST API from the Court Case Lookup Service.<br>
+					  This operation allows the calling application to retrieve the history of infractions for<br>an accused individual in the context of the specific court case.</a></td>
+                  <!--td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td-->
+                  
+                </tr>
+              </tbody></table>
+            </div>
+            <!-- END TABLE RESULT -->
+            
+            <!-- BEGIN PAGINATION -->
+            <ul class="pagination">
+              <li class="disabled"><a href="#">«</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+            <!-- END PAGINATION -->
+          </div>
+          <!-- END RESULT -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END SEARCH RESULT -->
+</div>
+</div>	
+					
+				<!-- Close Form -->
+					
+				</div>
+                </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
         <!-- /.container -->
-    </section>
+</section>
 
-    <!-- Services -->
+    <!-- Technology & Tools -->
     <section id="portfolio2" class="services bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Tools and Technology</h2>
+                    <h2>Technology &amp; Tools</h2>
                     <hr class="small">
-                    <div class="row">
-                        <div class="col-xs-6 col-md-4">
+					<div class="row">
+                        <div class="col-md-3 col-sm-6"></div>
+                        <div class="col-md-3 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-wrench fa-stack-1x text-primary"></i>
                             	</span>
                                 <h4>
-                                    <strong>Tools We Use</strong>
+                                    <strong>Technology &amp; Tools</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="tools.html" class="btn btn-light">Learn More</a>
+                                <a href="technology_tools.html" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
-                        <div class="col-xs-6 col-md-4">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-th fa-stack-1x text-primary"></i>
-                            </span>
-								<h4>
-                                    <strong>Related Technology</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="irt.html" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-4">
+                        <div class="col-md-3 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -173,12 +359,12 @@
 								<h4>
                                     <strong>Services Catalogue</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="isc.html" class="btn btn-light">Learn More</a>
+                                <a href="services_catalogue.html" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
-                        
+                        <div class="col-md-3 col-sm-6"></div>
                     </div>
+                    
                     <!-- /.row (nested)
                     <a href="#" class="btn btn-dark">View More Items</a> -->
                 </div>
@@ -187,64 +373,9 @@
             <!-- /.row -->
         </div>
         <!-- /.container -->
-	</section>
+</section>
 
-<<<<<<< HEAD
     <!-- Footer -->
-    <div _ngcontent-hcs-c130></div>
-        <div _ngcontent-hcs-c130 class="flex-footer2">
-          <app-footer _ngcontent-hcs-c130 _nghost-hcs-c129>
-            <div _ngcontent-hcs-c129 class="site-footer2 d-print-none2">
-              <div class="container">
-             <div class="row">
-                <div class="col-lg-12 text-left col-lg-offset-0">
-                    <div class="row site-footer2">
-                        <div class="col-md-3 col-lg-3">
-                            <div>
-                                <img src="img/GovBCLogo_WhereIdeasWorkWhite2.svg" width="300px" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-offset-0 col-lg-9">
-                            <div class="site-footer-links2">
-                                We acknowledge with respect that the Public Service operates throughout B.C. on the traditional lands of Indigenous Peoples.<br/>Compass is deeply committed to true and lasting reconciliation &amp; with Indigenous peoples in B.C.
-                            </div>
-                        </div>
-						<div class="col-md-4 col-lg-offset-0 col-lg-8">
-                            <!-- div>
-								  <a href="index.html" class="site-footer-links2">Home</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/about-gov-bc-ca" class="site-footer-links2">About gov.bc.ca</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/home/disclaimer" class="site-footer-links2">Disclaimer</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/home/privacy" class="site-footer-links2">Privacy</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/home/accessibility" class="site-footer-links2">Accessibility</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/home/copyright" class="site-footer-links2">Copyright</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services" class="site-footer-links2">Contact Us</a>
-                            </div -->
-							<ul _ngcontent-hcs-c129="" class="site-footer-links2 ps-02">
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="">Home</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/about-gov-bc-ca">About gov.bc.ca</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/disclaimer">Disclaimer</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/privacy">Privacy</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/accessibility">Accessibility</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/copyright">Copyright</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services">Contact Us</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2"></span>
-							</ul>
-                        </div>
-				</div>
-                    <!-- /.row (nested)
-                    <a href="#" class="btn btn-dark">View More Items</a> -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-=======
     <div _ngcontent-hcs-c130="" class="flex-content2"> </div>
         <div _ngcontent-hcs-c130="" class="flex-footer2">
           <app-footer _ngcontent-hcs-c130="" _nghost-hcs-c129="">
@@ -267,11 +398,67 @@
                   <span _ngcontent-hcs-c129="" class="divider2"></span>
                 </ul>
               </div>
->>>>>>> parent of 3808b60 (Merge branch 'consistency' into Dev)
             </div>
           </app-footer>
         </div>
-  
+ <style type="text/css">
+body{background:#eee;
+}
+
+.btn {
+    margin-bottom: 5px;
+}
+
+.grid {
+    position: relative;
+    width: 100%;
+    background: #eee;
+    color: #666666;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid .grid-body {
+    padding: 15px 20px 15px 20px;
+    font-size: 0.9em;
+    line-height: 1.9em;
+}
+
+.search table tr td.rate {
+    color: #f39c12;
+    line-height: 50px;
+}
+
+.search table tr:hover {
+    cursor: pointer;
+}
+
+.search table tr td.image {
+	width: 50px;
+}
+
+.search table tr td img {
+	width: 50px;
+	height: 50px;
+}
+
+.search table tr td.rate {
+	color: #f39c12;
+	line-height: 50px;
+}
+
+.search table tr td.price {
+	font-size: 1.5em;
+	line-height: 50px;
+}
+
+.search #price1,
+.search #price2 {
+	display: inline;
+	font-weight: 600;
+}
+</style> 
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -309,6 +496,39 @@
             }
         });
     });
+    </script>
+
+    <script>
+      function filterResults() {
+        var filtertext = document.getElementById("filterinput").value;
+        var showinput = document.getElementById("showinput");
+        var event_api_checked = document.getElementById("checkbox_event_api").checked;
+        var rest_api_checked = document.getElementById("checkbox_rest_api").checked;
+
+        if (filtertext === "") {
+          showinput.innerText = 'showing all results';
+
+          var divsToHide = document.getElementsByClassName("api_item");
+          for (var i = 0; i < divsToHide.length; i++) {
+            if ((i < 4 && event_api_checked) || (i >= 4 && rest_api_checked)) {
+              divsToHide[i].style.display = "block";
+            } else {
+              divsToHide[i].style.display = "none";
+            }
+          }
+        } else {
+          showinput.innerText = 'showing all results matching "' + filtertext + '"';
+
+          var divsToHide = document.getElementsByClassName("api_item");
+          for (var i = 0; i < divsToHide.length; i++) {
+            if (divsToHide[i].innerText.toLowerCase().includes(filtertext.toLowerCase()) && ((i < 4 && event_api_checked) || (i >= 4 && rest_api_checked))) {
+              divsToHide[i].style.display = "block";
+            } else {
+              divsToHide[i].style.display = "none";
+            }
+          }
+        }
+      }
     </script>
 
 </body>

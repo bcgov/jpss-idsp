@@ -50,33 +50,39 @@
 					</li>
 					<li><a href="architecture_patterns.html">Architecture & Patterns</a>
 					</li>
+					<li><a href="idsd.html">Service Deployments</a>
+					</li>
 					<li><a href="service_model.html">Service Model</a>
 					</li>
-					<li><a href="integration_governance.html">Integration Governance</a>
+					<li><a href="integration_lifecycle.html">Lifecycle</a>
 					</li>
-					<li><a href="sector_strategies_policies.html">Sector Strategies &amp; Policies</a>
+					<li><a href="sector_strategies_policies.html">Impacting Policies</a>
+					</li>
+					<li><a href="sector_strategies.html">Sector Strategies</a>
 					</li>
 				</ul>
 			<li>
 				<a href="">Who we are</a>
-            </li>				<ul>
+            </li>
+				<ul>
 					<li><a href="our_style.html">Our Style</a>
 					</li>
-					<li><a href="our_audience_stakeholders.html">Our Audience &amp; Stakeholders</a>
+					<li><a href="our_audience_stakeholders.html">Our Stakeholders</a>
 					</li>
 					<li><a href="our_team.html">Our Team</a>
 					</li>
 				</ul>
             <li>
-				<a href="technology_tools.html">Technology &amp; Tools</a>
-			</li>
+                <a href="">Tools & Technology</a>
+            </li>
 				<ul>
-					<li><a href="technology_tools.html">Technology &amp; Tools</a>
+					<li><a href="tools.html">Tools We Use</a>
+					</li>
+					<li><a href="technology_tools.html">Related Technology</a>
 					</li>
 					<li><a href="services_catalogue.html">Services Catalogue</a>
 					</li>
-				</ul>
-			<li>
+				</ul>            <li>
                 <a href="feedback.html">Feedback</a>
             </li>
         </ul>
@@ -93,7 +99,6 @@
             </div>
           </app-header>
 	</nav>
-
     <!-- Header -->
     <header id="top" class="header-page">
         <div class="text-vertical-center">
@@ -101,7 +106,7 @@
         </div>
     </header>
 
-    <!-- Page Content -->
+    <!-- About -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
@@ -122,17 +127,11 @@
             <!-- BEGIN FILTER BY CATEGORY -->
             <div class="info">
             
-			<div class="info-header"><h4>By Domain:</h4></div>
+			<div class="info-header"><h4>Business Domain</h4></div>
             <table class="table table-hover">
 				<tbody>
 					<tr>
-						<td class="bg-info">Court Case</td>
-					</tr>
-					<tr>
-						<td>Court Scheduling</td>
-					</tr>
-					<tr>
-						<td>Courts Digital Display</td>
+						<td><a href="isc.html">Court Case Management</a></td>
 					</tr>
 				</tbody>
 				</table>
@@ -140,13 +139,14 @@
 			 <p>&nbsp;</p> 
 			 <div class="info">
             
-			<div class="info-header"><h4 class="info-header">Integration Style:</h4></div>
-            <div class="checkbox">
-              <label><input type="checkbox" class="icheck"> Events</label>
-            </div>
-            <div class="checkbox">
-              <label><input type="checkbox" class="icheck"> APIs</label>
-            </div>
+			<div class="info-header"><h4 class="info-header">Integration Style</h4></div>
+            <table class="table table-hover">
+				<tbody>
+					<tr>
+						<td><a href="isc.html">REST API - Request/Response</a></td>
+					</tr>
+				</tbody>
+				</table>
 			  </div>
             <!-- END FILTER BY CATEGORY -->
             
@@ -163,17 +163,7 @@
           <!-- BEGIN RESULT -->
           <div class="col-md-9">
 			
-            <!-- BEGIN SEARCH INPUT -->
-            <div class="input-group">
-              <div class="padding">&nbsp;</div>
-				<input type="text" class="form-control" value="">
-              
-				<span class="input-group-btn">
-                <div class="padding">&nbsp;</div><a href="isc_result.html"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></a>
-              </span>
-            </div>
-            <!-- END SEARCH INPUT -->
-            <h3><i class="fa fa-file-o"></i> Summary</h3>
+            <h3><i class="fa fa-file-o"></i> Get Case Deposition (REST API)</h3>
             <div class="padding"></div>
             
             <div class="row">
@@ -188,24 +178,23 @@
 			
 				<!-- Summary Content -->
 				  <div>
-				  <p class="lead4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dolor sem, rhoncus in tempus vel, pellentesque at tellus. 
-					  Praesent sollicitudin faucibus libero vel venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vulputate pellentesque blandit. 
-					  Maecenas vulputate elit condimentum arcu cursus adipiscing. Aliquam id eros nunc, at hendrerit quam. Integer urna neque, tempus ac porta id, fermentum in est. 
-					  Proin accumsan facilisis mi, quis ultrices risus hendrerit id. Integer vitae est ligula, eget accumsan augue. Praesent lectus purus, blandit ut convallis a, 
-					  volutpat id turpis. Curabitur ut diam sed massa blandit aliquam id vel lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere 
-					  cubilia Curae.</p>
+				  <p class="lead4">This is a callable domain REST API from the Court Case Lookup Service.
+            This operations allows the calling application to retrieve a PDF copy of an entered deposition
+            relating to a court case.</p>
 					<br/>
-					<p class="lead4">Sed non tortor non arcu ultrices suscipit in eu nisl. Duis nec arcu ac arcu elementum tincidunt. In non diam in magna fermentum convallis. 
-						Sed quis cursus purus. Aliquam congue tellus in urna blandit faucibus. Mauris sodales iaculis metus, a sollicitudin leo ultrices ac. Nulla imperdiet 
-						interdum tortor ut imperdiet. Morbi vehicula erat eu turpis rhoncus rhoncus.</p>
+					<p class="lead4">Below is a solution concept diagram depicting the Court Case Management Services and the initial solution integrating three enterprise applications: JUSTIN, CORNET and DEMS.</p>
 				  
-				  <p class="lead4"><img src="img/catalogue1.png" width="729" height="176" alt=""/></p>
+				  <p class="lead4"><a href="assets/images/ccm-integration-solution-overview.png"><img src="img/ccm-integration-solution-overview.png" width="800" alt=""/></a></p>
+                  <br/>
+                  <p class="lead4">The Lookup Service allows calling applications to retrieve court case-specific deposition records.</p>
+
+                  <p class="lead4"><a href="assets/images/ccm-integration-solution-lookup-service.png"><img src="img/ccm-integration-solution-lookup-service.png" width="800" alt=""/></a></p>
 				  </div>
 				  <div class="col-md-11">
-				  <h3><i class="fa fa-file-o"></i> Integration Components</h3>
+				  <h3><i class="fa fa-file-o"></i> Technical Specification</h3>
             <div class="padding"></div>
 			
-			<p class="lead">Events</p>
+			<p class="lead">API Features</p>
             
             <div class="padding"></div>	  
 				  
@@ -214,27 +203,38 @@
 				<table class="table table-hover">
 				<thead>
     <tr>
-      <th scope="col" class="lead3">Name</th>
-		<th scope="col" class="lead3">Description</th>
+      <th scope="col" class="lead3">Feature</th>
+		<th scope="col" class="lead3">Details</th>
     </tr>
   </thead> <tbody>
-					<tr>
-						<td>Court Case Created</td>
-						<td>Business event containing details for a newly created court case</td>
-					</tr>
-					<tr>
-						<td>Court Case Approved</td>
-						<td>Business event containing details for a newly approved court case
-</td>
-					</tr>
-					<tr>
-						<td>Court Case Updated</td>
-						<td>Business event containing details for court case update details</td>
-					</tr>
-					<tr>
-						<td>Disclosure Published</td>
-						<td>Business event containing reference details for a new disclosure</td>
-					</tr>
+          <tr>
+              <td>OpenShift Namespace</td>
+              <td>AG PSSG JADE Platform (cef5dd)</td>
+          </tr>
+          <tr>
+            <td>API Type</td>
+            <td>REST</td>
+          </tr>
+          <tr>
+          <td>REST API Service</td>
+          <td>ccm-lookup-service</td>
+          </tr>
+          <tr>
+          <td>REST HTTP Method</td>
+          <td>GET</td>
+          </tr>
+          <tr>
+          <td>REST HTTP URI</td>
+          <td>/bcpsUsers/{userId}/courtCases/{caseNumber}/getDepositionRecords</td>
+          </tr>
+          <tr>
+          <td>Service Provider Application</td>
+          <td>JUSTIN</td>
+          </tr>
+          <tr>
+          <td>Service Consumer Application</td>
+          <td>DEMS</td>
+          </tr>
 				</tbody>
 				</table>
               </div>
@@ -252,37 +252,58 @@
 
             <div class="padding"></div>
 			<br/>
-			<p class="lead">APIs</p>
+			<p class="lead">API Schema</p>
             
             <div class="padding"></div>	  
+			
+            <p>This schema is defined using the Open API 3.0.1 specification.  It can be viewed using an online OpenAPI editor: e.g., <a href="https://editor.swagger.io">https://editor.swagger.io</a></p>
 				  
-				  
-            <div class="info">
-				<table class="table table-hover">
-				<thead>
-    <tr>
-      <th scope="col" class="lead3">Name</th>
-		<th scope="col" class="lead3">Description</th>
-    </tr>
-  </thead> <tbody>
-					<tr>
-						<td>Get Accused History</td>
-						<td>API to lookup accused history relating to a court case</td>
-					</tr>
-					<tr>
-						<td>Check User Access</td>
-						<td>APU to validate user access relating to a court case</td>
-					</tr>
-					<tr>
-						<td>Court Case Updated</td>
-						<td>Business event containing details for court case update details</td>
-					</tr>
-					<tr>
-						<td>Check eDisclosure Eligibility</td>
-						<td>API to confirm the e-disclosure eligibility for a given accused individual</td>
-					</tr>
-				</tbody>
-				</table>
+            <div>
+                <pre>
+---
+openapi: 3.0.2
+info:
+  title: Get Case Deposition API
+  version: 0.0.1
+  description: This operation allows the calling application to retrieve the deposition records associated with the court case.
+paths:
+  /bcpsUsers/{userId}/courtCases/{caseNumber}/getDepositionRecords:
+    get:
+      parameters:
+      - name: userId
+        in: path
+        description: user id
+        required: true
+        schema:
+          type: string
+      - name: caseNumber
+        in: path
+        description: case number
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    depositionId:
+                      type: string
+                    base64data:
+                      type: string
+          description: Deposition Records
+        401:
+          description: Not authorized
+          content: {}
+        404:
+          description: user id or case number not found
+          content: {}
+      operationId: getDepositionRecords
+                </pre>
               </div>
               <!-- END ORDER RESULT -->
               
@@ -295,7 +316,7 @@
 			<br/>
 			<p class="lead">Collaboration</p>
             
-            <p>This domain is created in collaboration with Court Services Branch, OCIA Platform Team and Red Hat Support.</p>
+            <p>This API is created in collaboration with ISB Integration Delivery Services Team, BC Prosecution Services, BC Court Services Branch, OCIO Platform Team, and Red Hat Support.</p>
              
 			<form align="right">
 			 <input type="button" class="btn btn-primary" value="Return" onclick="history.back()">
@@ -320,9 +341,9 @@
             <!-- /.row -->
         </div>
         <!-- /.container -->
-</section>
+    </section>
 
-    <!-- What We Do -->
+    <!-- Services -->
     <section id="portfolio2" class="services bg-primary">
         <div class="container">
             <div class="row">
@@ -363,7 +384,7 @@
 								<h4>
                                     <strong>Services Catalogue</strong>
                                 </h4>
-                                <a href="services_catalogue.html" class="btn btn-light">Learn More</a>
+                                <a href="isc.html" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
                         
@@ -376,62 +397,30 @@
             <!-- /.row -->
         </div>
         <!-- /.container -->
-</section>
+	</section>
 
-    <!-- Footer -->
-    <div _ngcontent-hcs-c130></div>
-        <div _ngcontent-hcs-c130 class="flex-footer2">
-          <app-footer _ngcontent-hcs-c130 _nghost-hcs-c129>
-            <div _ngcontent-hcs-c129 class="site-footer2 d-print-none2">
-              <div class="container">
-             <div class="row">
-                <div class="col-lg-12 text-left col-lg-offset-0">
-                    <div class="row site-footer2">
-                        <div class="col-md-3 col-lg-3">
-                            <div>
-                                <img src="img/GovBCLogo_WhereIdeasWorkWhite2.svg" width="300px" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-offset-0 col-lg-9">
-                            <div class="site-footer-links2">
-                                We acknowledge with respect that the Public Service operates throughout B.C. on the traditional lands of Indigenous Peoples.<br/>Compass is deeply committed to true and lasting reconciliation &amp; with Indigenous peoples in B.C.
-                            </div>
-                        </div>
-						<div class="col-md-4 col-lg-offset-0 col-lg-8">
-                            <!-- div>
-								  <a href="index.html" class="site-footer-links2">Home</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/about-gov-bc-ca" class="site-footer-links2">About gov.bc.ca</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/home/disclaimer" class="site-footer-links2">Disclaimer</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/home/privacy" class="site-footer-links2">Privacy</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/home/accessibility" class="site-footer-links2">Accessibility</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/home/copyright" class="site-footer-links2">Copyright</a><br>
-								  <a href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services" class="site-footer-links2">Contact Us</a>
-                            </div -->
-							<ul _ngcontent-hcs-c129="" class="site-footer-links2 ps-02">
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="">Home</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/about-gov-bc-ca">About gov.bc.ca</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/disclaimer">Disclaimer</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/privacy">Privacy</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/accessibility">Accessibility</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/copyright">Copyright</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services">Contact Us</a></li>
-							  <span _ngcontent-hcs-c129="" class="divider2"></span>
-							</ul>
-                        </div>
-				</div>
-                    <!-- /.row (nested)
-                    <a href="#" class="btn btn-dark">View More Items</a> -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
+    <div _ngcontent-hcs-c130="" class="flex-content2"> </div>
+        <div _ngcontent-hcs-c130="" class="flex-footer2">
+          <app-footer _ngcontent-hcs-c130="" _nghost-hcs-c129="">
+            <div _ngcontent-hcs-c129="" class="site-footer2 d-print-none2">
+              <div _ngcontent-hcs-c129="" class="container2">
+                <ul _ngcontent-hcs-c129="" class="site-footer-links2 ps-02">
+                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="">Home</a></li>
+                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/about-gov-bc-ca">About gov.bc.ca</a></li>
+                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/disclaimer">Disclaimer</a></li>
+                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/privacy">Privacy</a></li>
+                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/accessibility">Accessibility</a></li>
+                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/copyright">Copyright</a></li>
+                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services">Contact Us</a></li>
+                  <span _ngcontent-hcs-c129="" class="divider2"></span>
+                </ul>
+              </div>
             </div>
           </app-footer>
         </div>

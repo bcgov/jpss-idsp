@@ -101,128 +101,54 @@
         </div>
     </header>
 
-    <!-- Technology and Tools -->
+    <!-- Page Content -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-left">
-                    <h2>Definitions</h2>
-					<p class="lead">Below is a quick glossary of specific terms and terminology referenced in this site.</p>
-                <table class="table table-hover">
-					  <thead>
-						<tr>
-						  <th scope="col" class="lead">Term</th>
-						  <th scope="col" class="lead">Descrption</th>
-						  <th scope="col" class="lead">Additional Notes</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-							<td class="lead">API</td>
-							<td class="lead">Application Programming Interface (API) is a set of definitions and protocols for integrating software.  APIs in an enterprise can be categorized as edge, utility, and domain APIs. Edge APIs act as the gateway to the enterprise systems while domain APIs expose the internal systems to the integration layer. Utility APIs contain the integration logic acting as the glue between edge APIs and the internal systems.</td>
-							<td class="lead">Web article: <a href="https://blog.axway.com/amplify-products/api-management/different-types-apis">What are the different types of APIs?</a></td>
-						</tr>
-
-						<tr>
-							<td class="lead">API-First Approach</td>
-							<td class="lead">In an API-first approach, we start with the API design and then move into the implementation of APIs as well as the integration logic. Since we begin with API design, we call this the API design-first or, for brevity, API-first approach.  This is also known in the Enterprise Integration Patterns canon as the '<a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/CanonicalDataModel.html">canonical data model</a>' message transformation pattern .</td>
-							<td class="lead">Web article: <a href="https://www.infoq.com/articles/api-first-integration/">A Seven-Step Guide to API-First Integration</a></td>
-						</tr>
-
-						<tr>
-							<td class="lead">DEMS</td>
-							<td class="lead">Digital Evidence Management System.</td>
-							<td class="lead"></td>
-						</tr>
-
-						<tr>
-							<td class="lead">HTTPS</td>
-							<td class="lead">Hypertext transfer protocol secure (HTTPS) is the secure version of HTTP Traffic is encrypted using TLS.</td>
-							<td class="lead"></td>
-						</tr>
-
-						<tr>
-							<td class="lead">Integration-First Approach</td>
-							<td class="lead">An integration-first approach is a traditional bottom-up approach where we build the integration logic first on top of backend services and then expose the integrated services (also known as composite services) as managed APIs to users.</td>
-							<td class="lead">Web article: <a href="https://www.infoq.com/articles/api-first-integration/">A Seven-Step Guide to API-First Integration</a></td>
-						</tr>
-
-						<tr>
-							<td class="lead">Integration Pattern</td>
-							<td class="lead">An integration pattern refers to any standardized method for messaging between two IT systems.  This could be relating to messaging endpoints (e.g. polling consumer), message construction (e.g. reqeuest-reply), messaging channels (e.g. publish-and-subscribe channel), message routing (e.g. content-based router), message transformation (e.g. canonical data model), and systems management (e.g. message history).</td>
-							<td class="lead">Web article (from Enterprise Integration Patterns): <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/Chapter1.html">Solving Integration Problems using Patterns</a></td>
-						</tr>
-
-						<tr>
-							<td class="lead">Integration Service</td>
-							<td class="lead">An integration service is a secure communication component that transports and can transform data from one organization (business area or partner) to another.</td>
-							<td class="lead">More info: <a href="integration_service.html">What is an integration service?</a></td>
-						</tr>
-
-						<tr>
-							<td class="lead">Integration Stack</td>
-							<td class="lead">A specific implementation of an integration service with key technologies and products identified.</td>
-							<td class="lead"></td>
-						</tr>
-
-						<tr>
-							<td class="lead">JSON</td>
-							<td class="lead">JavaScript Object Notation (JSON) is a lightweight data-interchange format that is easy for humans to read and write.</td>
-							<td class="lead"></td>
-						</tr>
-
-						<tr>
-							<td class="lead">JUSTIN</td>
-							<td class="lead">BCPS Case Management System.</td>
-							<td class="lead"></td>
-						</tr>
-
-						<tr>
-							<td class="lead">JWT</td>
-							<td class="lead">Json Web Token (JWT) is an open, industry standard RFC 7519 method for securely transmitting information between parties as a JSON object, and which is digitally signed.</td>
-                            <td class="lead">Web article: <a href="https://anil-pace.medium.com/json-web-tokens-vs-oauth-2-0-85dd0b32057d#:~:text=So%20the%20real%20difference%20is,JWT%20as%20a%20token%20format.">JSON Web Tokens vs Oauth 2.0</a></td>
-						</tr>
-
-						<tr>
-                            <td class="lead">OAuth / OAuth 2.0</td>
-                            <td class="lead">OAuth and OAuth 2.0 are the industry-standard protocols for authorization. OAuth allows you to use a 3rd party application to access a specific access-controlled digital content or service (e.g. photos stored on Google Drive) without you needing to share your Google email and password with the 3rd party application.  OAuth 2.0 focuses on client developer simplicity while providing specific authorization flows for web applications, desktop applications, mobile phones, and living room devices.</td>
-                            <td class="lead">Web article: <a href="https://oauth.net/2/">OAuth 2.0</a></td>
-                        </tr>
-
-						<tr>
-                            <td class="lead">REST API</td>
-                            <td class="lead">Representational State Transfer (REST) is a set of architectural constraints used to design stateless APIs.</td>
-                            <td class="lead">Web article: <a href="https://blog.axway.com/amplify-products/api-management/event-driven-vs-rest-api-interactions">Event-driven vs RET API interactions</a></td>
-                        </tr>
-
-						<tr>
-                            <td class="lead">Streaming API</td>
-                            <td class="lead">Streaming API (sometimes referred to as event-driven, or realtime API) interaction patterns differ from REST API.  Instead of </td>
-                            <td class="lead">Web articles:
-                                <ul>
-                                    <li><a href="https://blog.axway.com/amplify-products/api-management/event-driven-vs-rest-api-interactions">Event-driven vs RET API interactions</a></li>
-                                    <li><a href="https://ably.com/blog/the-realtime-api-family">The Realtime API Family</a></li>
-                                </ul>
-                            </td>
-                        </tr>
-
-						<tr>
-                            <td class="lead">TLS</td>
-                            <td class="lead">Transport Layer Security (TLS) is a security protocol designed to facilitate privacy and data security for communications over the Internet.</td>
-                            <td class="lead"></td>
-                        </tr>
-
-						</tr>
-						  </tbody>
-					</table>
-                </div>
-                </div>
-			
+					<p class="lead">The JPSS Information Services Branch (ISB) has identified the need to update its outdated integration technology and associated services. The current technology and services are not meeting the needs of the sector clients, because they are challenging to maintain and are being discontinued by suppliers.</p>
+					<h3>Our Current Pain Points</h3>
+					
+                  <ul class="lead">
+                    <li>
+                    Licensing, infrastructure, and upgrades are expensive 
+                    </li>
+                    <li>
+                    Business logic fragmented and exists outside applications; Integration coupled directly to data sources are inflexible 
+                    </li>
+                    <li>
+                    Hard to find staff resources with capabilities 
+                    </li>
+                    <li>
+                    Outdated technology 
+                    </li>
+                    <li>
+                    Data models in the database are linked directly to API’s making it expensive to revise either one 
+                    </li>
+                    <li>
+                    Lack of clarity around what integrations exist and who is accountable
+                    </li>
+                    <li>
+                    Lack of defined integration services and an easy way for clients to access integration services 
+                    </li>
+                    <li>
+                    Lost opportunity to leverage what may already exist for new products
+                    </li>
+                    <li>
+                    Lack of Application Programming Interface (API) management repository/catalogue & processes
+                    </li>
+                    <li>
+                    Poor vendor-developer experience (i.e., not easy to find who to work with inside ISB and for what)
+                    </li>
+                </ul>
 				</div>
                 </div>
-             <!-- /.row -->
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
         <!-- /.container -->
-    </section>
+</section>
 
     <!-- What We Do -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -322,28 +248,59 @@
 </section>
 
     <!-- Footer -->
-    <div _ngcontent-hcs-c130="" class="flex-content2"> </div>
-        <div _ngcontent-hcs-c130="" class="flex-footer2">
-          <app-footer _ngcontent-hcs-c130="" _nghost-hcs-c129="">
-            <div _ngcontent-hcs-c129="" class="site-footer2 d-print-none2">
-              <div _ngcontent-hcs-c129="" class="container2">
-                <ul _ngcontent-hcs-c129="" class="site-footer-links2 ps-02">
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="">Home</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/about-gov-bc-ca">About gov.bc.ca</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/disclaimer">Disclaimer</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/privacy">Privacy</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/accessibility">Accessibility</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/copyright">Copyright</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services">Contact Us</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2"></span>
-                </ul>
-              </div>
+    <div _ngcontent-hcs-c130></div>
+        <div _ngcontent-hcs-c130 class="flex-footer2">
+          <app-footer _ngcontent-hcs-c130 _nghost-hcs-c129>
+            <div _ngcontent-hcs-c129 class="site-footer2 d-print-none2">
+              <div class="container">
+             <div class="row">
+                <div class="col-lg-12 text-left col-lg-offset-0">
+                    <div class="row site-footer2">
+                        <div class="col-md-3 col-lg-3">
+                            <div>
+                                <img src="img/GovBCLogo_WhereIdeasWorkWhite2.svg" width="300px" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-offset-0 col-lg-9">
+                            <div class="site-footer-links2">
+                                We acknowledge with respect that the Public Service operates throughout B.C. on the traditional lands of Indigenous Peoples.<br/>Compass is deeply committed to true and lasting reconciliation &amp; with Indigenous peoples in B.C.
+                            </div>
+                        </div>
+						<div class="col-md-4 col-lg-offset-0 col-lg-8">
+                            <!-- div>
+								  <a href="index.html" class="site-footer-links2">Home</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/about-gov-bc-ca" class="site-footer-links2">About gov.bc.ca</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/home/disclaimer" class="site-footer-links2">Disclaimer</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/home/privacy" class="site-footer-links2">Privacy</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/home/accessibility" class="site-footer-links2">Accessibility</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/home/copyright" class="site-footer-links2">Copyright</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services" class="site-footer-links2">Contact Us</a>
+                            </div -->
+							<ul _ngcontent-hcs-c129="" class="site-footer-links2 ps-02">
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="">Home</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/about-gov-bc-ca">About gov.bc.ca</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/disclaimer">Disclaimer</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/privacy">Privacy</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/accessibility">Accessibility</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/copyright">Copyright</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services">Contact Us</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2"></span>
+							</ul>
+                        </div>
+				</div>
+                    <!-- /.row (nested)
+                    <a href="#" class="btn btn-dark">View More Items</a> -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
             </div>
           </app-footer>
         </div>
