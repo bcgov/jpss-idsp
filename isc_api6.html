@@ -15,7 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/stylish-portfolio2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -33,60 +33,7 @@
 <body>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li>
-                <p>&nbsp;</p><a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="">What we do</a>
-            </li>
-				<ul>
-					<li><a href="integration_service.html">What is Integration Service</a>
-					</li>
-					<li><a href="current_pain_points.html">Current Pain Points</a>
-					</li>
-					<li><a href="architecture_patterns.html">Architecture & Patterns</a>
-					</li>
-					<li><a href="idsd.html">Service Deployments</a>
-					</li>
-					<li><a href="service_model.html">Service Model</a>
-					</li>
-					<li><a href="integration_lifecycle.html">Lifecycle</a>
-					</li>
-					<li><a href="sector_strategies_policies.html">Impacting Policies</a>
-					</li>
-					<li><a href="sector_strategies.html">Sector Strategies</a>
-					</li>
-				</ul>
-			<li>
-				<a href="">Who we are</a>
-            </li>
-				<ul>
-					<li><a href="our_style.html">Our Style</a>
-					</li>
-					<li><a href="our_audience_stakeholders.html">Our Stakeholders</a>
-					</li>
-					<li><a href="our_team.html">Our Team</a>
-					</li>
-				</ul>
-            <li>
-                <a href="">Tools & Technology</a>
-            </li>
-				<ul>
-					<li><a href="tools.html">Tools We Use</a>
-					</li>
-					<li><a href="technology_tools.html">Related Technology</a>
-					</li>
-					<li><a href="services_catalogue.html">Services Catalogue</a>
-					</li>
-				</ul>            <li>
-                <a href="feedback.html">Feedback</a>
-            </li>
-        </ul>
-	</nav>
+<!--#include file="navigation.ssi" -->
 	
 	<nav class="navbar-style">	
           <app-header _ngcontent-hcs-c130="" _nghost-hcs-c128="">
@@ -390,31 +337,52 @@ paths:
         <!-- /.container -->
 	</section>
 
-    <div _ngcontent-hcs-c130="" class="flex-content2"> </div>
-        <div _ngcontent-hcs-c130="" class="flex-footer2">
-          <app-footer _ngcontent-hcs-c130="" _nghost-hcs-c129="">
-            <div _ngcontent-hcs-c129="" class="site-footer2 d-print-none2">
-              <div _ngcontent-hcs-c129="" class="container2">
-                <ul _ngcontent-hcs-c129="" class="site-footer-links2 ps-02">
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="">Home</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/about-gov-bc-ca">About gov.bc.ca</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/disclaimer">Disclaimer</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/privacy">Privacy</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/accessibility">Accessibility</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/copyright">Copyright</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2">|</span>
-                  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129="" href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services">Contact Us</a></li>
-                  <span _ngcontent-hcs-c129="" class="divider2"></span>
-                </ul>
-              </div>
-            </div>
-          </app-footer>
-        </div>
+
+        <div _ngcontent-hcs-c130 class="flex-footer2">
+          <app-footer _ngcontent-hcs-c130 _nghost-hcs-c129>
+            <div _ngcontent-hcs-c129 class="site-footer2 d-print-none2">
+              <div class="container">
+             <div class="row">
+                <div class="col-lg-12 text-left col-lg-offset-0">
+                    <div class="row site-footer2">
+                        <div class="col-md-3 col-lg-3">
+                            <div>
+                                <img src="img/GovBCLogo_WhereIdeasWorkWhite2.svg" width="300px" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-offset-0 col-lg-9">
+                            <div class="site-footer-links2">
+                                We acknowledge with respect that the Public Service operates throughout B.C. on the traditional lands of Indigenous Peoples.<br/>Compass is deeply committed to true and lasting reconciliation &amp; with Indigenous peoples in B.C.
+                            </div>
+                        </div>
+						<div class="col-md-4 col-lg-offset-0 col-lg-8">
+                            <!-- div>
+								  <a href="index.html" class="site-footer-links2">Home</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/about-gov-bc-ca" class="site-footer-links2">About gov.bc.ca</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/home/disclaimer" class="site-footer-links2">Disclaimer</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/home/privacy" class="site-footer-links2">Privacy</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/home/accessibility" class="site-footer-links2">Accessibility</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/home/copyright" class="site-footer-links2">Copyright</a><br>
+								  <a href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services" class="site-footer-links2">Contact Us</a>
+                            </div -->
+							<ul _ngcontent-hcs-c129="" class="site-footer-links2 ps-02">
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="">Home</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/about-gov-bc-ca">About gov.bc.ca</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/disclaimer">Disclaimer</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/privacy">Privacy</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/accessibility">Accessibility</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/copyright">Copyright</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2">|</span>
+							  <li _ngcontent-hcs-c129=""><a _ngcontent-hcs-c129 class="divider2" href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services">Contact Us</a></li>
+							  <span _ngcontent-hcs-c129="" class="divider2"></span>
+							</ul>
+                        </div>
+				</div>
  <style type="text/css">
 body{background:#eee;
 }
